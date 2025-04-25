@@ -26,11 +26,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $employeeManager->addEmployee($method, $employeeDto);
 
   } catch (Exception $e) {
-    echo json_encode(array("status" => false, "message" => $e->getMessage()));
+    echo json_encode(array("success" => false, "message" => $e->getMessage()));
 
   }
 } else {
-  echo json_encode(["status" => false, "message" => "error"]);
+  echo json_encode(["success" => false, "message" => "error"]);
   exit();
 }
 
