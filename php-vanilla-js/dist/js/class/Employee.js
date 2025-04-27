@@ -6,7 +6,7 @@ class EmployeeClass {
   constructor(key, signal) {
     this.#_key = key;
     this.#_signal = signal;
-    this.#_uri = "submit.php";
+    this.#_uri = "route.php";
   }
 
   /**
@@ -42,39 +42,6 @@ class EmployeeClass {
     }
   }
 
-
-  reset = async () => {
-    const {
-      nationality,
-      department,
-      marriage,
-      gender,
-
-      name,
-      birthDate,
-      hireDate,
-      address,
-
-
-      email,
-      phone
-
-    } = this.getForms();
-
-    nationality.selectedIndex = 0;
-    department.selectedIndex = 0;
-    marriage.selectedIndex = 0;
-    gender.selectedIndex = 0;
-
-    name.value = '';
-    birthDate.value = new Date().toISOString().split('T')[0];
-    hireDate.value = new Date().toISOString().split('T')[0];
-    address.value = '';
-
-    email.value = '';
-    phone.value = '';
-
-  }
   getForms = () => {
     return {
       nationality: document.getElementById("nationality"),
@@ -169,13 +136,14 @@ class EmployeeClass {
         if (response && response.success) {
           API.addSuccess();
         } else {
+          this.error = true;
           API.addFailure();
         }
       } catch (error) {
+        this.error = true;
         console.error(error);
         API.failureMessage();
       } finally {
-        //await this.reset();
         addButton.removeAttribute("disabled");
       }
     }

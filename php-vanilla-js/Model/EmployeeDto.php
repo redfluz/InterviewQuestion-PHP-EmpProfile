@@ -1,19 +1,15 @@
 <?php
-
+namespace Model;
 class EmployeeDto {
     private string $name;
     private string $gender;
     private string $marriage;
     private string $phone;
     private string $email;
-    private $address;
-    private $dateOfBirth;
-    /**
-     * Summary of nationality , our own code we use country 
-     * @var 
-     */
+    private string $address;
+    private string $birthDate;
     private string $nationality;
-    private $hiredDate;
+    private string $hireDate;
     private string $department;
 
     public function __construct($name, $gender, $marriage, $phone, $email, $address, $dateOfBirth, $nationality, $hiredDate, $department) {
@@ -24,9 +20,9 @@ class EmployeeDto {
         $this->phone = $phone;
         $this->email = $email;
         $this->address = $address;
-        $this->dateOfBirth = $dateOfBirth;
+        $this->birthDate = $dateOfBirth;
         $this->nationality = $nationality;
-        $this->hiredDate = $hiredDate;
+        $this->hireDate = $hiredDate;
         $this->department = $department;
     }
   public function toArray(): array {
@@ -37,9 +33,9 @@ class EmployeeDto {
       'phone' => $this->phone,
       'email' => $this->email,
       'address' => $this->address,
-      'dateOfBirth' => $this->dateOfBirth,
+      'dateOfBirth' => $this->birthDate,
       'nationality' => $this->nationality,
-      'hiredDate' => $this->hiredDate,
+      'hiredDate' => $this->hireDate,
       'department' => $this->department
     ];
   }

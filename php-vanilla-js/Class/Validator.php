@@ -1,4 +1,6 @@
 <?php
+namespace Class;
+use Exception;
 
 class Validator
 {

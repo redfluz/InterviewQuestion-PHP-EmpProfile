@@ -1,5 +1,6 @@
 <?php
-enum SaveMethod: string {
+namespace Enum;
+enum ESave: string {
     case JSON = 'json';
     case CSV = 'csv';
 }

@@ -127,7 +127,7 @@
       obj.add();
       if(obj.error === false  || obj.error === null) {
         setTimeout(() => {
-          window.location.href = "list.php"; // Redirect to list.php
+         window.location.href = "list.php"; // Redirect to list.php
         }, 1000); // 1000ms = 1 second
       }
 
