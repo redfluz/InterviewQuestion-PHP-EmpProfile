@@ -29,7 +29,6 @@ class EmployeeClass
         break;
       default:
         echo json_encode(array("success" => false, "message" => "Method not supported"));
-        exit();
     }
     echo json_encode(["success" => true, "message" => "record added successfully"]);
     exit();

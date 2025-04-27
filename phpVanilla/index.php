@@ -97,28 +97,6 @@
           </div>
         </div>
       </div>
-      <br/><br/
-      <table class="table" id="tableData">
-        <thead>
-        <tr>
-          <?php
-          // foreach (array_keys($employees[0]) as $header) {
-          //      echo "<th>" . htmlspecialchars($header) . "</th>";
-          // } ?>
-        </tr>
-        </thead>
-        <tbody id="tableBody">
-        <?php
-        /***
-         * foreach ($employees as $row) {
-         * echo "<tr>";
-         * foreach ($row as $value) {
-         * echo "<td>" . htmlspecialchars($value) . "</td>";
-         * }
-         * echo "</tr>";
-         * } ***/ ?>
-        </tbody>
-      </table>
     </div>
   </div>
 </div>
